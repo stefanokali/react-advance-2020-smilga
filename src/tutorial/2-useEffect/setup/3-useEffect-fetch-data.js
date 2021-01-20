@@ -10,11 +10,14 @@ const UseEffectFetchData = () => {
     const users = await response.json();
     setUsers(users);
     //console.log(users);
+    console.log("async function");
   };
 
   useEffect(() => {
     getUsers();
   }, []);
+
+  console.log("outside async");
 
   return (
     <>
